@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Orbitron:wght@400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white font-orbitron overflow-x-hidden;
+    background-color: #030005; /* Deep cyber space */
+  }
+}
+
+.glass-panel {
+  background: rgba(10, 10, 20, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(176, 38, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.glass-panel-blue {
+  background: rgba(0, 20, 30, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.neon-border {
+  border: 1px solid rgba(8, 247, 254, 0.5);
+  box-shadow: 0 0 10px rgba(8, 247, 254, 0.3), inset 0 0 10px rgba(8, 247, 254, 0.1);
+}
+
+.neon-border-purple {
+  border: 1px solid rgba(176, 38, 255, 0.5);
+  box-shadow: 0 0 10px rgba(176, 38, 255, 0.3), inset 0 0 10px rgba(176, 38, 255, 0.1);
+}
+
+.neon-text-blue {
+  text-shadow: 0 0 10px #08f7fe, 0 0 20px #08f7fe, 0 0-30px #08f7fe, 0 0 40px #08f7fe;
+}
+
+.neon-text-pink {
+  text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 30px #ff007f, 0 0 50px #ff007f;
+}
+
+.neon-text-purple {
+  text-shadow: 0 0 10px #b026ff, 0 0 20px #b026ff, 0 0 30px #b026ff, 0 0 50px #b026ff;
+}
+
+@keyframes hero-pulse {
+  0%, 100% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.02); filter: brightness(1.2); }
+}
+
+@keyframes color-shift {
+  0%, 100% { color: #ff007f; text-shadow: 0 0 20px #ff007f, 0 0 40px #ff007f; }
+  33% { color: #08f7fe; text-shadow: 0 0 20px #08f7fe, 0 0 40px #08f7fe; }
+  66% { color: #b026ff; text-shadow: 0 0 20px #b026ff, 0 0 40px #b026ff; }
+}
+
+.animate-color-shift {
+  animation: color-shift 5s infinite;
+}
+
+.terminal-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.terminal-scroll::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.5);
+}
+.terminal-scroll::-webkit-scrollbar-thumb {
+  background: #08f7fe;
+  border-radius: 3px;
+}
+
+/* Base custom selection color */
+::selection {
+  background: rgba(176, 38, 255, 0.5);
+  color: #fff;
+}
