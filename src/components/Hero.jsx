@@ -49,25 +49,25 @@ const Hero = () => {
       <EmojiCube />
 
       <motion.h1 
-        className="text-5xl md:text-7xl lg:text-9xl font-black mb-4 tracking-tighter uppercase leading-none"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5, duration: 0.8 }}
+        className="text-5xl md:text-8xl lg:text-9xl font-black mb-4 tracking-tighter uppercase leading-none"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
       >
-        <span className="block neon-text-blue mb-2">
+        <span className="block neon-text-blue mb-4">
           HAPPY BIRTHDAY
         </span>
-        <span className="block animate-color-shift">
-          Vishnu Mama
+        <span className="block text-neon-purple neon-text-purple">
+          VISHNU MAMA
         </span>
       </motion.h1>
 
       <motion.div 
-        className="mt-8 inline-block px-10 py-4 rounded-xl border-2 border-neon-cyan shadow-[0_0_20px_rgba(8,247,254,0.5)] bg-black/40 backdrop-blur-xl"
-        whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(8,247,254,0.8)", borderColor: "#fff" }}
+        className="mt-8 inline-block px-12 py-5 rounded-lg border-2 border-neon-cyan shadow-[0_0_20px_rgba(8,247,254,0.3)] bg-black/40 backdrop-blur-xl"
+        whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(8,247,254,0.6)" }}
       >
-        <p className="text-2xl md:text-3xl font-mono text-neon-green font-bold tracking-[0.2em] uppercase">
-          "Build v22.0 Stable Version Released for Deployment"
+        <p className="text-xl md:text-2xl lg:text-3xl font-mono text-neon-cyan font-bold tracking-widest uppercase">
+          "BUILD V22.0 STABLE VERSION RELEASED FOR DEPLOYMENT"
         </p>
       </motion.div>
 
