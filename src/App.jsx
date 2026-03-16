@@ -27,6 +27,13 @@ function App() {
     return () => audio.pause();
   }, [isMuted]);
 
+  // Scroll to top when content is shown
+  useEffect(() => {
+    if (showContent) {
+      window.scrollTo(0, 0);
+    }
+  }, [showContent]);
+
   const handleBootComplete = () => {
     setIsBooting(false);
     
