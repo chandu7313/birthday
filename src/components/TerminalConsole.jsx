@@ -113,7 +113,6 @@ const TerminalConsole = () => {
             className="flex-1 bg-transparent border-none outline-none text-white focus:ring-0 placeholder-gray-600"
             spellCheck="false"
             autoComplete="off"
-            autoFocus
           />
         </form>
       </div>

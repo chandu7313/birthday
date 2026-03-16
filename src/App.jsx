@@ -27,10 +27,13 @@ function App() {
     return () => audio.pause();
   }, [isMuted]);
 
-  // Scroll to top when content is shown
+  // Force scroll to top when content is shown
   useEffect(() => {
     if (showContent) {
-      window.scrollTo(0, 0);
+      // Use requestAnimationFrame to ensure it happens after layout paints
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      });
     }
   }, [showContent]);
 
