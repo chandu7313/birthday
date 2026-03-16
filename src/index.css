@@ -38,15 +38,36 @@
 }
 
 .neon-text-blue {
-  text-shadow: 0 0 10px #08f7fe, 0 0 20px #08f7fe, 0 0-30px #08f7fe, 0 0 40px #08f7fe;
+  color: #fff;
+  text-shadow:
+    0 0 7px #08f7fe,
+    0 0 15px #08f7fe,
+    0 0 25px #08f7fe;
 }
 
 .neon-text-pink {
-  text-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f, 0 0 30px #ff007f, 0 0 50px #ff007f;
+  color: #fff;
+  text-shadow:
+    0 0 7px #ff007f,
+    0 0 15px #ff007f,
+    0 0 25px #ff007f;
 }
 
 .neon-text-purple {
-  text-shadow: 0 0 10px #b026ff, 0 0 20px #b026ff, 0 0 30px #b026ff, 0 0 50px #b026ff;
+  color: #fff;
+  text-shadow:
+    0 0 7px #b026ff,
+    0 0 15px #b026ff,
+    0 0 25px #b026ff;
+}
+
+@keyframes neon-flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+  20%, 22%, 24%, 55% { opacity: 0.8; }
+}
+
+.animate-flicker {
+  animation: neon-flicker 4s infinite alternate;
 }
 
 @keyframes hero-pulse {
